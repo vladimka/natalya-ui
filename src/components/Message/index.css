@@ -1,0 +1,19 @@
+.message-wrapper{
+    display: flex;
+}
+
+.message-wrapper.fromMe{
+    justify-content: flex-end;
+}
+
+.message{
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgb(145, 33, 160);
+}
+
+.message.fromMe{
+    background-color: rgb(92, 89, 89);
+}
+
