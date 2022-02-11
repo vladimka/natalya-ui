@@ -6,14 +6,18 @@
     justify-content: flex-end;
 }
 
+.message-wrapper:last-child{
+    margin-bottom: 35px;
+}
+
 .message{
     color: white;
     padding: 5px;
     border-radius: 5px;
-    background-color: rgb(145, 33, 160);
+    background-color: var(--message-bg);
+    max-width: 50%;
 }
 
 .message.fromMe{
-    background-color: rgb(92, 89, 89);
+    background-color: var(--fromMe-message-bg);
 }
-
