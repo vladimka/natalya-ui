@@ -1,4 +1,4 @@
 :root{
-    --fromMe-message-bg: rgb(92, 89, 89);
-    --message-bg: rgb(145, 33, 160);
+    --message-bg: white;
+    --fromMe-message-bg: rgb(145, 33, 160);
 }

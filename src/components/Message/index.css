@@ -1,5 +1,6 @@
 .message-wrapper{
     display: flex;
+    margin-bottom: 10px;
 }
 
 .message-wrapper.fromMe{
@@ -11,13 +12,27 @@
 }
 
 .message{
-    color: white;
+    color: black;
     padding: 5px;
     border-radius: 5px;
     background-color: var(--message-bg);
     max-width: 50%;
 }
 
+.name{
+    color: var(--fromMe-message-bg);
+}
+
 .message.fromMe{
     background-color: var(--fromMe-message-bg);
+    color: white;
+}
+
+.timestamp{
+    color: grey;
+    font-size: 0.7rem;
+}
+
+.message.fromMe .timestamp{
+    color: lightgray;
 }

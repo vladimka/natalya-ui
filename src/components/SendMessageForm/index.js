@@ -20,7 +20,7 @@ export default function SendMessageForm(){
 
     return (
         <form onSubmit={submit} className="send-message-form">
-            <input type="text" autoComplete="false" ref={inputRef} />
+            <input type="text" autoComplete="false" ref={inputRef} className="shadow" />
             <button>Send</button>
         </form>
     )
