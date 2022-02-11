@@ -1,17 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import MessageList from './components/MessageList';
-import Message from './components/Message';
 import SendMessageForm from './components/SendMessageForm';
+import store from './store';
 
-export default function App() {
+export default function App(){
+  let [messages, setMessages] = useState([]);
+
+  store.subscribe(() => {
+    let state = store.getState();
+    setMessages(state.messages);
+  });
+
   return (
     <div className="App">
-      <MessageList>
-        <Message fromMe={true} text="Hi!" timestamp={Date.now()} />
-        <Message text="Hello, Sir. What are you doing?" timestamp={Date.now()} />
-      </MessageList>
-    <SendMessageForm/>
+      <MessageList messages={messages} />
+      <SendMessageForm />
     </div>
   );
 }

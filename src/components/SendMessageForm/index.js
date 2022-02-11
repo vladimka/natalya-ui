@@ -1,5 +1,6 @@
 import React, { createRef } from 'react';
 import './index.css';
+import store from '../../store';
 
 export default function SendMessageForm(){
     const inputRef = createRef();
@@ -13,8 +14,7 @@ export default function SendMessageForm(){
         if(msg == '')
             return;
 
-        console.log(msg);
-
+        store.dispatch({ type : 'APPEND_MESSAGE', message : { text : msg, timestamp : Date.now(), fromMe : true } });
         inputRef.current.value = '';
     }
 
